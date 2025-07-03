@@ -1,0 +1,23 @@
+
+🧪 Simulated Temperature Experiment Results:
+
+=== Temperature: 0.0 ===
+Solar energy is renewable, reduces electricity bills, and helps combat climate change.
+
+=== Temperature: 0.5 ===
+Using solar power can reduce pollution, lower costs, and provide energy independence.
+
+=== Temperature: 1.0 ===
+Solar energy is like capturing sunshine in a jar—it powers homes while hugging the Earth.
+
+-------------------------------
+
+📘 Analysis:
+
+With temperature = 0.0, the model gives a factual and concise answer, focusing on concrete benefits.
+
+At temperature = 0.5, the answer becomes slightly more conversational and includes varied phrasing.
+
+With temperature = 1.0, the output is much more creative and metaphorical, demonstrating the randomness and expressiveness added by a higher temperature.
+
+✅ This simulation demonstrates that temperature significantly influences the style, creativity, and determinism of the language model's response.
