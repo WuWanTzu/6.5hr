@@ -1,0 +1,34 @@
+def make_rag_prompt(query, relevant_passage):
+    """
+    根據提供的上下文資訊與使用者提問，組合出一個格式良好的提示語句，用於生成式 AI 模型。
+
+    參數：
+    - query: str，使用者的問題
+    - relevant_passage: str 或 list of str，與問題相關的內容（上下文）
+
+    回傳：
+    - str，格式化後的 prompt 字串
+    """
+    # 如果 relevant_passage 是 list，就把它合併為一段文字
+    if isinstance(relevant_passage, list):
+        context = "\n".join(relevant_passage)
+    else:
+        context = relevant_passage
+
+    prompt = (
+        f"Based on the following information:\n"
+        f"{context}\n\n"
+        f"Please answer this question:\n"
+        f"{query}"
+    )
+    return prompt
+
+query = "What is the difference between content-based and collaborative filtering?"
+
+relevant_passages = [
+    "Content-based filtering recommends items similar to those a user liked in the past.",
+    "Collaborative filtering uses the preferences of many users to suggest items.",
+    "Content-based filtering depends on item features, while collaborative filtering depends on user behavior."
+]
+
+print(make_rag_prompt(query, relevant_passages))
