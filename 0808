@@ -1,0 +1,19 @@
+def make_rag_prompt(query, relevant_passages):
+    """
+    Parameters:
+    query (str): 使用者的原始問題。
+    relevant_passages (list of str): 從資料庫中檢索到的相關段落。
+
+    Returns:
+    str: 格式化後的提示字串。
+    """
+    if not query:
+        raise ValueError("Query should not be empty.")
+
+    if not isinstance(relevant_passages, list) or not relevant_passages:
+        raise ValueError("Relevant passages must be a non-empty list of strings.")
+
+    combined_passages = " ".join(relevant_passages)
+    prompt = f"Based on the following information: {combined_passages}, please answer this question: {query}"
+
+    return prompt
